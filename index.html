@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,500;1,700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .one {
+      display: flex;
+      flex: 1;
+      background-image: url('./images/bg-main-desktop.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .two {
+      display: flex;
+      flex: 2;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      font-size: 18px;
+      font-family: space;
+      font-weight: 500;
+
+      flex-wrap: wrap;
+    }
+
+    .cardfront {
+      position: absolute;
+      width: 447px;
+      height: 245px;
+      top: 16rem;
+      color: white;
+      left: 9rem;
+      border-radius: 13px;
+      background-image: url('./images/bg-card-front.png');
+    }
+
+    .cardback {
+      position: absolute;
+      top: 34rem;
+      width: 447px;
+      height: 245px;
+      left: 17rem;
+      background-image: url('./images/bg-card-back.png');
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 3rem;
+    }
+
+    .frontbottom>div:nth-child(2) {
+      display: flex;
+
+      justify-content: space-between;
+      margin-top: 11px;
+    }
+
+    .cardfront {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    #zero {
+      font-size: 34px;
+      letter-spacing: 3px;
+      text-align-last: justify;
+    }
+
+    .two {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    input[type="number"] {
+      width: 5rem;
+    }
+
+    input[type="button"] {
+      width: 100%;
+      color: hsl(0, 0%, 100%);
+      background: hsl(278, 68%, 11%);
+    }
+
+    input[type="number"]:nth-child(4) {
+      width: 10rem;
+      margin-left: 1rem;
+    }
+
+    input:focus {
+      outline: none;
+      border: 1px solid hsl(249, 99%, 64%);
+    }
+
+    input {
+      width: 100%;
+      height: 2.6rem;
+      padding: 0 15px;
+      border-radius: 5px;
+      border: 1px solid lightgray;
+      margin: 5px 0px;
+    }
+
+    label {
+      padding-bottom: 10px;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    form>div {
+      margin-bottom: 1rem;
+    }
+
+    .wronnumber {
+      font-size: 13px;
+      margin-left: 5px;
+      color: hsl(0, 100%, 66%);
+      height: 22px;
+    }
+
+    #wronnumber {
+      font-size: 13px;
+      margin-left: 5px;
+      color: hsl(0, 100%, 66%);
+      height: 22px;
+    }
+
+    #wrongnum {
+      display: inline;
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      margin-left: 5px;
+      color: hsl(0, 100%, 66%);
+      height: 22px;
+    }
+
+    #cvc {
+      margin-right: 4.5rem;
+    }
+
+    @media screen and (max-width: 780px) {
+      body {
+        height: 135vh;
+        flex-flow: column;
+        font-size: 18px;
+      }
+      .one{
+        background-image: url('./images/bg-main-mobile.png');
+      }
+      .cardback {
+        position: absolute;
+        top: 1rem;
+        left: 6rem;
+        width: 317px;
+        height: 174px;
+        background-size: contain;
+
+      }
+
+      .cardfront {
+        position: absolute;
+        top: 6rem;
+        left: 1rem;
+        z-index: 5;
+        width: 317px;
+        height: 174px;
+        background-size: contain;
+      }
+
+      
+
+      #zero {
+        font-size: 25px;
+        letter-spacing: 1px;
+      }
+    }
+
+    @media screen and (max-width: 420px) {
+      .cardfront {
+        width: 286px;
+        height: 157px;
+        left: 4rem;
+      }
+
+      .cardback {
+        width: 286px;
+        height: 157px;
+        left: 1rem;
+      }
+      #zero {
+        font-size: 20px;
+        letter-spacing: 1px;
+      }
+      body{
+        font-size: 14px;
+      }
+    }
+    @media screen and (min-width: 1120px) {}
+  </style>
+</head>
+
+<body>
+
+  <div class="one">
+    <div class="cardfront">
+      <div>
+        <img src="./images/card-logo.svg" alt="">
+      </div>
+      <div class="frontbottom">
+        <div id="zero">
+          0000 0000 0000 0000
+        </div>
+        <div>
+          <p>Jane Appleseed</p>
+          <p>00/00</p>
+        </div>
+      </div>
+    </div>
+    <div class="cardback">
+      <p>000</p>
+    </div>
+  </div>
+  <div class="two" id="submtishow">
+
+
+
+
+    <form>
+      <div>
+        <div> <label> Cardholder Name</label></div>
+        <input type="text" required placeholder="e.g. Jane Appleseed">
+        <div class="wronnumber" id="namedev"></div>
+      </div>
+      <div>
+        <div><label>Card Number</label></div>
+
+        <input type="text" required placeholder=" e.g. 1234 5678 9123 0000">
+        <div id="wronnumber"></div>
+      </div>
+      <div>
+        <div>
+          <label> Exp. Date (MM/YY) </label><label style="margin-left: 14px;"> CVC</label>
+        </div>
+
+        <input type="number" required placeholder="MM">
+        <input type="number" required placeholder="YY">
+        <input type="number" placeholder=" e.g. 123">
+        <div id="wrongnum">
+          <div id="cvc1"></div>
+          <div id="cvc"></div>
+        </div>
+      </div>
+
+      <div><input onclick="check()" type="button" value="Confirm"></div>
+    </form>
+  </div>
+
+  </div>
+  <script>
+    // Wrong format,numbers only
+    // Can't be blank
+    // Can't be blank
+    // Wrong format,numbers only
+    console.log("Welcome Developers")
+    let inputs = document.querySelectorAll('input');
+    console.log(inputs);
+
+    let a = 7;
+    function check() {
+      console.log("clicked")
+      if (isNaN(inputs[1].value)) {
+        console.log("hello")
+        document.getElementById('wronnumber').innerHTML = 'Wrong format,number only';
+        a--;
+      }
+      else if (inputs[1].value == "") {
+        document.getElementById('wronnumber').innerHTML = "Can't be blank";
+        a--;
+      }
+      if (!isNaN(inputs[0].value)) {
+        document.getElementById('namedev').innerText = "Wrong format,Text only";
+        a--;
+      }
+      else if (inputs[0].value == "") {
+        document.getElementById('namedev').innerText = "Can't be blank";
+        a--;
+      }
+      if (inputs[3].value == '') {
+        document.getElementById('cvc1').innerHTML = " Can't be blank";
+        a--;
+      }
+      if (inputs[4].value == '') {
+        document.getElementById('cvc1').innerHTML = " Can't be blank";
+        a--;
+      }
+      if (inputs[4].value == '') {
+        document.getElementById('cvc').innerHTML = " Can't be blank";
+        a--;
+      }
+      console.log(a);
+      if (a == 7) {
+        window.open('./index2.html');
+      }
+      a = 7;
+
+
+    }
+  </script>
+
+
+</body>
+
+</html>

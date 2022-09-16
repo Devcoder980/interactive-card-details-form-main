@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,500;1,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+
+        .one {
+            display: flex;
+            flex: 1;
+            background-image: url('./images/bg-main-desktop.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .two {
+            display: flex;
+            flex: 2;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            font-size: 18px;
+            font-family: space;
+            font-weight: 500;
+        }
+
+        .cardfront {
+            position: absolute;
+            width: 447px;
+            height: 245px;
+            top: 16rem;
+            color: white;
+            left: 9rem;
+            border-radius: 13px;
+            background-image: url('./images/bg-card-front.png');
+        }
+
+        .cardback {
+            position: absolute;
+            top: 34rem;
+            width: 447px;
+            height: 245px;
+            left: 17rem;
+            background-image: url('./images/bg-card-back.png');
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 3rem;
+        }
+
+        .frontbottom>div:nth-child(2) {
+            display: flex;
+
+            justify-content: space-between;
+            margin-top: 11px;
+        }
+
+        .cardfront {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #zero {
+            font-size: 34px;
+            letter-spacing: 3px;
+            text-align-last: justify;
+        }
+
+        .two {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 354px;
+        }
+
+        input {
+            width: 100%;
+            height: 2rem;
+            color: white;
+            margin-top: 18px;
+            background-color:  hsl(278, 68%, 11%);
+            border-radius: 5px;
+        }
+
+
+        #cvc {
+            margin-right: 4.5rem;
+        }
+
+        .box {
+            width: 400px;
+        }
+
+        h3,
+        small {
+            margin: 8px;
+        }
+        @media screen and (max-width: 780px) {
+      body {
+        height: 135vh;
+        flex-flow: column;
+        font-size: 18px;
+      }
+
+      .cardback {
+        position: absolute;
+        top: 1rem;
+        left: 6rem;
+        width: 317px;
+        height: 174px;
+        background-size: contain;
+
+      }
+
+      .cardfront {
+        position: absolute;
+        top: 6rem;
+        left: 1rem;
+        z-index: 5;
+        width: 317px;
+        height: 174px;
+        background-size: contain;
+      }
+
+      .two {
+        justify-content: flex-start;
+      }
+
+      #zero {
+        font-size: 25px;
+        letter-spacing: 1px;
+      }
+    }
+
+    @media screen and (max-width: 420px) {
+      .cardfront {
+        width: 286px;
+        height: 157px;
+        left: 4rem;
+      }
+
+      .cardback {
+        width: 286px;
+        height: 157px;
+        left: 1rem;
+      }
+      #zero {
+        font-size: 20px;
+        letter-spacing: 1px;
+      }
+      body{
+        font-size: 14px;
+      }
+    }
+    </style>
+</head>
+
+<body>
+
+    <div class="one">
+        <div class="cardfront">
+            <div>
+                <img src="./images/card-logo.svg" alt="">
+            </div>
+            <div class="frontbottom">
+                <div id="zero">
+                    0000 0000 0000 0000
+                </div>
+                <div>
+                    <p>Jane Appleseed</p>
+                    <p>00/00</p>
+                </div>
+            </div>
+        </div>
+        <div class="cardback">
+            <p>000</p>
+        </div>
+    </div>
+    <div class="two" id="submtishow">
+
+
+        <div style="display:flex; flex-direction: column; text-align: center;">
+            <div>
+                <div><img src="./images/icon-complete.svg" alt=""></div>
+            </div>
+            <div>
+                <h3>Thank You</h3>
+            </div>
+            <div>
+                <small>We've added Your card detail</small>
+            </div>
+            <div>
+                <a href="./index.html"><input onclick="check()" type="button" value="Continue"></a>
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+
+
+</body>
+
+</html>
