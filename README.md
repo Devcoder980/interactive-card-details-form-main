@@ -1,4 +1,4 @@
-# Frontend Mentor - Interactive card details form
+# - Interactive card details form
 
 ![Design preview for the Interactive card details form coding challenge](./design/desktop-preview.jpg)
 
@@ -6,7 +6,7 @@
 
 Thanks for checking out this front-end coding challenge.
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+ challenges help you improve your coding skills by building realistic projects.
 
 **To do this challenge, you need a good understanding of HTML, CSS and JavaScript.**
 
@@ -25,7 +25,7 @@ Your users should be able to:
 - View the optimal layout depending on their device's screen size
 - See hover, active, and focus states for interactive elements on the page
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+Want some support on the challenge? [Join our Slack community] and ask questions in the **#help** channel.
 
 ### Expected behaviour
 
@@ -42,7 +42,7 @@ Your task is to build out the project to the designs inside the `/design` folder
 
 The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member]
 
 You will find all the required assets in the `/images` folder. The assets are already optimized.
 
@@ -67,7 +67,7 @@ As mentioned above, there are many ways to host your project for free. Our recom
 - [Vercel](https://vercel.com/)
 - [Netlify](https://www.netlify.com/)
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts]
 
 ## Create a custom `README.md`
 
